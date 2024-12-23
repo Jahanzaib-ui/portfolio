@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        html,
+        body {
+            height: auto;
+            overflow: visible;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+
+
+        body {
+            background-color: rgb(0, 4, 54);
+            color: white;
+            font-family: "Poppins", serif;
+
+        }
+
+
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            height: 54px;
+            background-color: rgb(5, 5, 95);
+
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0px 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            cursor: pointer;
+            color: rgb(148, 148, 240);
+            font-size: 1.02rem;
+
+        }
+
+        .left {
+            font-size: 1.1rem;
+        }
+
+        .firstsection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 23px 0px;
+        }
+
+        .firstsection div> {
+            width: 30%;
+        }
+
+        .leftsection {
+            /* border: 2px solid red; */
+            /* background-color: red; */
+            font-size: 2.5rem;
+            /* margin: 43px 0px; */
+        }
+
+        .leftsection .btn {
+            background-color: rgb(105, 84, 228);
+            color: white;
+            /* border: 2px solid   rgb(5, 5, 95); */
+            border: none;
+            padding: 6px 22px;
+            border-radius: 7px;
+        }
+
+        .rightsection img {
+            width: 70%;
+            /* margin: 30px 0px; */
+        }
+
+        /* utility classes */
+
+        .purple {
+            color: rgb(105, 84, 228);
+        }
+
+        .grey-text {
+            color: grey;
+        }
+
+        #element {
+            color: rgb(105, 84, 228);
+        }
+
+        .image-top {
+            width: 48px;
+            position: relative;
+            top: -50px;
+            left: -26px
+        }
+
+        .vertical-title {
+            position: relative;
+            top: 36px;
+            width: 170px;
+
+        }
+
+        .vertical-desc {
+            position: relative;
+            top: 36px;
+            width: 172px;
+            font-size: 10px;
+            color: grey;
+            margin-bottom: 60px;
+        }
+
+        main hr {
+            border: 0;
+            background: rgb(105, 84, 228);
+            height: 1.2px;
+            margin: 44px 80px;
+        }
+
+        /* 
+        main {
+            flex: 1; 
+            margin-bottom: 100px;
+            /* Adjust spacing before the footer */
+        /* } */
+
+
+
+
+        /* now our second section starts form here  */
+        .secondsection {
+            max-width: 80vw;
+            margin: auto;
+        }
+
+        .secondsection h1 {
+            font-size: 1.8rem;
+        }
+
+        .secondsection .line {
+            background: white;
+            width: 80vw;
+            height: 2px;
+            margin: 56px 0px;
+            display: flex;
+
+        }
+
+        .secondsection .vertical {
+            background-color: white;
+            width: 1px;
+            height: 93px;
+            margin: 0px 100px;
+
+
+        }
+
+        main {
+
+            margin-bottom: 10px;
+            padding-bottom: 282px;
+            /* border: 2px solid red; */
+
+
+        }
+
+        .footer {
+            display: flex;
+            padding: 23px 122px;
+            justify-content: space-evenly;
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+
+
+        footer {
+            /* width: 100%; */
+            /* height: 233px; */
+
+            background-color: rgb(5, 5, 95);
+
+            /* border: 2px solid green; */
+            /* Visual debugging */
+        }
+
+        .footer-rights {
+            color: grey;
+            text-align: center;
+            padding: 10px 0px;
+        }
+
+
+
+        /* media quries */
+        /* Default styles for larger screens remain unchanged */
+
+/* Small devices (e.g., iPhone SE, 320px) */
+@media screen and (max-width: 320px) {
+    body {
+        font-size: 12px;
+    }
+
+    nav {
+        flex-direction: column;
+        height: auto;
+        justify-content: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .firstsection {
+        flex-direction: column;
+        align-items: center;
+        margin: 10px 0;
+    }
+
+    .firstsection .leftsection {
+        width: 100%;
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    .firstsection .rightsection img {
+        width: 80%;
+        margin-top: 10px;
+    }
+
+    .secondsection {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .footer ul {
+        padding: 0;
+    }
+}
+
+/* iPhone 6/7/8 (375px width) */
+@media screen and (max-width: 375px) {
+    body {
+        font-size: 13px;
+    }
+
+    nav {
+        flex-direction: column;
+        height: auto;
+        justify-content: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .firstsection {
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 0;
+    }
+
+    .firstsection .leftsection {
+        width: 100%;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .firstsection .rightsection img {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .secondsection {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .footer ul {
+        padding: 0;
+        margin: 10px 0;
+    }
+}
+
+/* iPhone X styles (375px width) */
+@media screen and (max-width: 375px) and (max-height: 812px) {
+    body {
+        font-size: 14px;
+    }
+
+    nav {
+        flex-direction: column;
+        height: auto;
+        justify-content: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .firstsection {
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 0;
+    }
+
+    .firstsection .leftsection {
+        width: 100%;
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    .firstsection .rightsection img {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .secondsection {
+        max-width: 100%;
+        padding: 0 25px;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .footer ul {
+        padding: 0;
+        margin: 10px 0;
+    }
+}
+
+/* iPhone XR (414px width) */
+@media screen and (max-width: 414px) and (max-height: 896px) {
+    body {
+        font-size: 15px;
+    }
+
+    .firstsection {
+        flex-direction: column;
+        margin: 20px 0;
+    }
+
+    .firstsection .leftsection {
+        width: 100%;
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .firstsection .rightsection img {
+        width: 100%;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* iPad (768px width) */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .firstsection {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .secondsection {
+        max-width: 90%;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+/* Default styles for vertical titles and descriptions */
+.vertical-title {
+    position: relative;
+    top: 36px;
+    width: 170px;
+    font-size: 1rem;
+}
+
+.vertical-desc {
+    position: relative;
+    top: 36px;
+    width: 172px;
+    font-size: 0.8rem;
+    color: grey;
+    margin-bottom: 60px;
+}
+
+.line {
+    background: white;
+    width: 80vw;
+    height: 2px;
+    margin: 56px 0px;
+    display: flex;
+}
+
+.vertical {
+    background-color: white;
+    width: 1px;
+    height: 93px;
+    margin: 0px 100px;
+}
+
+/* Small devices (e.g., iPhone SE, 320px) */
+@media screen and (max-width: 320px) {
+    .vertical-title {
+        font-size: 0.9rem;
+        width: 100%;
+        text-align: center;
+        top: 0;
+    }
+
+    .vertical-desc {
+        font-size: 0.7rem;
+        width: 100%;
+        top: 0;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .line {
+        width: 100%;
+        margin: 30px 0;
+    }
+
+    .vertical {
+        width: 1px;
+        height: 70px;
+        margin: 0 40px;
+    }
+
+    main {
+        padding-bottom: 100px; /* Add space at the bottom */
+    }
+}
+
+/* iPhone 6/7/8 (375px width) */
+@media screen and (max-width: 375px) {
+    .vertical-title {
+        font-size: 1rem;
+        width: 100%;
+        text-align: center;
+        top: 0;
+    }
+
+    .vertical-desc {
+        font-size: 0.8rem;
+        width: 100%;
+        top: 0;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .line {
+        width: 100%;
+        margin: 40px 0;
+    }
+
+    .vertical {
+        width: 1px;
+        height: 80px;
+        margin: 0 60px;
+    }
+
+    main {
+        padding-bottom: 120px; /* Add more space for footer */
+    }
+}
+
+/* iPhone X styles (375px width, 812px height) */
+@media screen and (max-width: 375px) and (max-height: 812px) {
+    .vertical-title {
+        font-size: 1.1rem;
+        width: 100%;
+        text-align: center;
+        top: 0;
+    }
+
+    .vertical-desc {
+        font-size: 0.9rem;
+        width: 100%;
+        top: 0;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .line {
+        width: 100%;
+        margin: 50px 0;
+    }
+
+    .vertical {
+        width: 1px;
+        height: 90px;
+        margin: 0 80px;
+    }
+
+    main {
+        padding-bottom: 140px; /* Add more space for footer */
+    }
+}
+
+/* iPhone XR (414px width, 896px height) */
+@media screen and (max-width: 414px) and (max-height: 896px) {
+    .vertical-title {
+        font-size: 1.2rem;
+        width: 100%;
+        text-align: center;
+        top: 0;
+    }
+
+    .vertical-desc {
+        font-size: 1rem;
+        width: 100%;
+        top: 0;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    .line {
+        width: 100%;
+        margin: 60px 0;
+    }
+
+    .vertical {
+        width: 1px;
+        height: 100px;
+        margin: 0 100px;
+    }
+
+    main {
+        padding-bottom: 160px; /* Add more space for footer */
+    }
+}
+
+/* iPad styles (768px width) */
+@media screen and (max-width: 768px) {
+    .vertical-title {
+        font-size: 1.3rem;
+        width: 100%;
+        text-align: center;
+        top: 0;
+    }
+
+    .vertical-desc {
+        font-size: 1.1rem;
+        width: 100%;
+        top: 0;
+        margin-bottom: 60px;
+        text-align: center;
+    }
+
+    .line {
+        width: 100%;
+        margin: 70px 0;
+    }
+
+    .vertical {
+        width: 1px;
+        height: 110px;
+        margin: 0 120px;
+    }
+
+    main {
+        padding-bottom: 1300px; /* Add more space for footer */
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Jahanzaib's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Projects</a></li>
+                    <li><a href="">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstsection">
+            <div class="leftsection">
+                My name is <span class="purple">Jahanzaib.</span>
+                <div>and Im a Passionate</div>
+                <!-- <div>Web Developer</div> -->
+                <span id="element"></span>
+                <div>
+                    <button class="btn">GitHub</button>
+                    <button class="btn">Download Resume</button>
+                </div>
+            </div>
+            <div class="rightsection">
+                <img src="bg.png" alt="img">
+            </div>
+        </section>
+        <hr>
+        <section class="secondsection">
+            <span class="grey-text">What I have done so Far..</span>
+            <h1>Work Experience</h1>
+            <div class="line">
+                <div class="vertical">
+                    <img src="bg.png" alt="img" class="image-top">
+                    <div class="vertical-title">Bachelor of Computer Science <br>(2020-2024)</div>
+                    <div class="vertical-desc">Earned a Bachelor’s in Computer Science (2020-2024), mastering
+                        programming, problem-solving, and modern technologies to craft innovative digital solutions.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img src="bg.png" alt="img" class="image-top">
+                    <div class="vertical-title">Projects & Innovation</div>
+                    <div class="vertical-desc">Developed standout projects like DocQuery, showcasing responsiveness and
+                        creative web concepts, and multiple GitHub-hosted projects emphasizing clean UI design and
+                        functional workflows.
+                    </div>
+                </div>
+                <div class="vertical"> <img src="bg.png" alt="img" class="image-top">
+                    <div class="vertical-title">Technical Expertise</div>
+                    <div class="vertical-desc">Specialized in front-end development with a focus on crafting responsive,
+                        user-friendly, and aesthetic interfaces. Proficient in HTML, CSS, and JavaScript, with
+                        experience in modern design principles and intuitive UI/UX workflows.
+                    </div>
+                </div>
+                <div class="vertical"> <img src="bg.png" alt="img" class="image-top">
+                    <div class="vertical-title">Problem Solver & Innovator</div>
+                    <div class="vertical-desc">Adept at tackling real-world challenges through innovative technical
+                        solutions. Combining a strong foundation in Computer Science with hands-on project experience to
+                        craft scalable and impactful applications.
+                    </div>
+                </div>
+                <div class="vertical"> <img src="bg.png" alt="img" class="image-top">
+                    <div class="vertical-title">Future Aspirations</div>
+                    <div class="vertical-desc">assionate about driving innovation in web development and UI/UX design.
+                        Aiming to contribute to projects that merge technology with creativity to enhance user
+                        experiences.
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                Jahanzaib's Portfolio
+            </div>
+            <div class="footer-second">
+                <ul>
+                    <li>Home</li>
+                    <li>About </li>
+                    <li>Contact us</li>
+                    <li>home</li>
+                </ul>
+            </div>
+            <div class="footer-third">
+                <ul>
+                    <li>Home</li>
+                    <li>About </li>
+                    <li>Contact us</li>
+                    <li>home</li>
+                </ul>
+            </div>
+            <div class="footer-fouth">
+                <ul>
+                    <li>Home</li>
+                    <li>About </li>
+                    <li>Contact us</li>
+                    <li>home</li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="footer-rights">
+            Copy Right&#169;jahanzaib's Portfolio.com | All rights reserved
+        </div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Ui/Ux Designer', 'Web Developer'],
+            typeSpeed: 50,
+            backSpeed: 30, // Speed of deleting the text
+            loop: true, // Enables looping
+        });
+    </script>
+</body>
+
+</html>
